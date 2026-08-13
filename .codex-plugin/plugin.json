@@ -1,0 +1,30 @@
+{
+  "name": "vstok-agent-execution",
+  "version": "1.0.0",
+  "description": "Turn verified VStok recommendations into minimal draft pull requests with Codex.",
+  "author": {
+    "name": "VStok",
+    "email": "support@novol.dev"
+  },
+  "homepage": "https://vstok.net/docs/agent-execution",
+  "repository": "https://github.com/novolgit/vstok-agent-plugins",
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "VStok Agent Execution",
+    "shortDescription": "Implement verified VStok recommendations as safe draft PRs.",
+    "longDescription": "Connect Codex to VStok, select a code-eligible AI visibility recommendation, implement the smallest repository change, run native checks, and create a draft pull request. GitHub and VStok verification remain authoritative.",
+    "developerName": "VStok",
+    "category": "Developer Tools",
+    "capabilities": ["Remote MCP", "OAuth", "GitHub draft PRs", "Verification"],
+    "defaultPrompt": [
+      "Find the best current VStok recommendation for this repository and implement it to a draft PR.",
+      "List code-eligible VStok recommendations for the current project.",
+      "Resume my active VStok execution safely."
+    ],
+    "brandColor": "#8B5CF6",
+    "composerIcon": "./assets/icon-180.png",
+    "logo": "./assets/icon-512.png"
+  }
+}

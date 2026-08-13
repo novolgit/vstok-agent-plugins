@@ -1,0 +1,22 @@
+{
+  "$schema": "https://cursor.com/schemas/cursor-plugin/plugin.json",
+  "name": "vstok-agent-execution",
+  "displayName": "VStok Agent Execution",
+  "version": "1.0.0",
+  "description": "Implement verified VStok recommendations as minimal draft pull requests.",
+  "author": {
+    "name": "VStok",
+    "email": "support@novol.dev"
+  },
+  "homepage": "https://vstok.net/docs/agent-execution",
+  "repository": "https://github.com/novolgit/vstok-agent-plugins",
+  "license": "MIT",
+  "logo": "./assets/icon-512.png",
+  "keywords": ["vstok", "ai-visibility", "seo", "github", "agent-execution"],
+  "category": "developer-tools",
+  "tags": ["automation", "mcp", "seo", "pull-requests"],
+  "skills": "./skills/",
+  "rules": "./rules/",
+  "hooks": "./hooks/cursor-hooks.json",
+  "mcpServers": "./mcp.json"
+}

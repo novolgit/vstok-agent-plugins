@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": "python3 ${CURSOR_PLUGIN_ROOT}/hooks/cursor_safety_guard.py",
+        "matcher": "Shell|ApplyPatch|Write|Edit",
+        "failClosed": true
+      }
+    ]
+  }
+}

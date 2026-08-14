@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "vstok-agent-execution",
+  "displayName": "VStok Agent Execution",
+  "version": "1.1.0",
+  "description": "Implement verified VStok recommendations as minimal draft pull requests with Claude.",
+  "author": {
+    "name": "VStok",
+    "email": "support@novol.dev",
+    "url": "https://vstok.net"
+  },
+  "homepage": "https://vstok.net/docs/agent-execution",
+  "repository": "https://github.com/novolgit/vstok-agent-plugins",
+  "license": "MIT",
+  "keywords": ["vstok", "ai-visibility", "seo", "github", "agent-execution", "mcp"],
+  "skills": "./skills/",
+  "hooks": "./hooks/claude-hooks.json",
+  "mcpServers": "./.mcp.json"
+}

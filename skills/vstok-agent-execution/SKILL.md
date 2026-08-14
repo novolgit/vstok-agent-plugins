@@ -26,11 +26,11 @@ For a user-initiated run:
 2. Call `list_actionable_recommendations`, rank only returned code-eligible items, and let an explicit user choice override ranking.
 3. Call `get_recommendation_context` before touching the repository.
 4. Confirm the repository remote matches a mapped repository and the requested targets and criteria are concrete.
-5. Call `create_execution` with `mode: manual` and this provider.
+5. Call `create_execution` with `mode: manual` and the provider matching the current host: `codex`, `cursor`, or `claude`.
 
 For scheduled automation:
 
-1. Call `list_execution_queue` with this provider.
+1. Call `list_execution_queue` with the provider matching the current host: `codex`, `cursor`, or `claude`.
 2. Select only an execution mapped to the current repository.
 3. Call `claim_execution` atomically. If the claim fails, do no work.
 4. Start work only after the authoritative response is `claimed` and includes a lease.

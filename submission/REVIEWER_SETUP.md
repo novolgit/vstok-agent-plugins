@@ -17,8 +17,8 @@ The reviewer account must not use an employee's personal account, production cus
 2. Map the repository to the reviewer project and map the `production` environment.
 3. Run a site audit against the sandbox deployment after intentionally removing one approved fixture, such as `FAQPage` JSON-LD.
 4. Confirm a fresh `code_safe`, low-risk recommendation exists with a target URL, evidence, deterministic acceptance criteria, and required checks.
-5. Keep Codex and Cursor auto mode disabled for manual review.
-6. Confirm the reviewer workspace has at least two unused executions.
+5. Keep Codex, Cursor, and Claude auto mode disabled for manual review.
+6. Confirm the reviewer workspace has at least three unused executions.
 
 ## Codex review flow
 
@@ -33,6 +33,10 @@ The reviewer account must not use an employee's personal account, production cus
 ## Cursor review flow
 
 Repeat the same flow after installing the Cursor plugin. Verify that the safety hook rejects a force-push, non-draft PR command, default-branch push, or change under a denied path while on a `vstok/*` branch.
+
+## Claude review flow
+
+Repeat the Codex flow after installing the Claude plugin and authorizing the bundled remote MCP server. Verify that the `PreToolUse` safety hook rejects a force-push, merge, non-draft PR command, default-branch push, or change under a denied path while on a `vstok/*` branch.
 
 ## Expected result
 

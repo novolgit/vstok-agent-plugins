@@ -37,7 +37,7 @@ Manual execution is available on eligible recommendations. Repository owners may
 - VStok Growth or Agency plan.
 - VStok GitHub App installed on the target repository.
 - Repository mapped to a VStok project and production environment.
-- Customer-owned Codex or Cursor account and GitHub write access for the agent.
+- Customer-owned Codex, Cursor, or Claude account and GitHub write access for the agent.
 
 ## Pricing disclosure
 

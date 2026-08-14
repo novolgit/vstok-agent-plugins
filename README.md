@@ -1,6 +1,6 @@
 # VStok Agent Execution
 
-VStok Agent Execution connects Codex or Cursor to code-eligible recommendations from [VStok](https://vstok.net). The agent works in the customer's repository, makes the smallest compatible change, runs repository-native checks, and opens a **draft** pull request. GitHub webhooks and post-deployment verification determine whether the recommendation is complete.
+VStok Agent Execution connects Codex, Cursor, or Claude to code-eligible recommendations from [VStok](https://vstok.net). The agent works in the customer's repository, makes the smallest compatible change, runs repository-native checks, and opens a **draft** pull request. GitHub webhooks and post-deployment verification determine whether the recommendation is complete.
 
 ![VStok Agent Execution in Integrations](assets/integrations.png)
 
@@ -17,7 +17,7 @@ VStok Agent Execution connects Codex or Cursor to code-eligible recommendations 
 
 - A VStok Growth or Agency workspace.
 - A VStok project mapped to a GitHub repository through the VStok GitHub App.
-- A customer-owned Codex or Cursor account.
+- A customer-owned Codex, Cursor, or Claude account.
 - Repository permissions to create a branch and draft pull request.
 
 ## Codex installation
@@ -40,13 +40,18 @@ Suggested prompt:
 
 Install from the Cursor marketplace when approved. For reviewer testing, install this repository as a local plugin, authorize the remote MCP connection, and open the mapped reviewer repository. Scheduled automation must remain disabled unless the repository owner explicitly enables it in VStok.
 
+## Claude installation
+
+Install from the Claude plugin directory when approved, then authorize the bundled `vstok` remote MCP server. For reviewer testing, run `claude --plugin-dir .` from this repository, open `/mcp` to complete OAuth, and use the same suggested prompt in the mapped reviewer repository. The Claude `PreToolUse` safety hook blocks force-push, merge, non-draft PR creation, default-branch push, and denied paths on active `vstok/*` branches.
+
 ## Package layout
 
 - `.codex-plugin/plugin.json` — Codex manifest.
 - `.cursor-plugin/plugin.json` — Cursor manifest.
+- `.claude-plugin/plugin.json` — Claude manifest.
 - `.mcp.json` and `mcp.json` — remote OAuth MCP configuration.
 - `skills/vstok-agent-execution/SKILL.md` — portable execution workflow.
-- `rules/` and `hooks/` — Cursor safety policy and fail-closed guard.
+- `rules/` and `hooks/` — Cursor and Claude safety policies and fail-closed guards.
 - `templates/` — optional Codex scheduled task and Cursor Automation prompts.
 - `submission/` — listing copy, reviewer setup, test cases, and data-handling notes.
 
@@ -57,5 +62,3 @@ Install from the Cursor marketplace when approved. For reviewer testing, install
 - Privacy: <https://vstok.net/legal/privacy>
 - Terms: <https://vstok.net/legal/terms>
 - Security reports: `security@novol.dev`
-
-Claude Code is intentionally not advertised in version 1.0.0. The current production execution contract supports Codex and Cursor only.

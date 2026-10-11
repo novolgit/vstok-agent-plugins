@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vstok": {
+      "type": "http",
+      "url": "https://api.vstok.net/api/mcp/v1"
+    }
+  }
+}

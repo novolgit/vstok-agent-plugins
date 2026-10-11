@@ -1,0 +1,25 @@
+{
+  "name": "vstok-recommendations",
+  "version": "1.0.0",
+  "description": "Review verified VStok recommendations and execution status with read-only MCP tools.",
+  "mcpServers": {
+    "vstok": {
+      "httpUrl": "https://api.vstok.net/api/mcp/v1",
+      "includeTools": [
+        "list_projects",
+        "list_actionable_recommendations",
+        "get_recommendation_context",
+        "get_execution"
+      ],
+      "oauth": {
+        "enabled": true,
+        "scopes": [
+          "projects:read",
+          "recommendations:read",
+          "executions:read"
+        ]
+      }
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

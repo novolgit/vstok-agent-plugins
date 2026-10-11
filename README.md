@@ -62,3 +62,17 @@ Install from the Claude plugin directory when approved, then authorize the bundl
 - Privacy: <https://vstok.net/legal/privacy>
 - Terms: <https://vstok.net/legal/terms>
 - Security reports: `security@novol.dev`
+
+## Gemini CLI
+
+```sh
+gemini extensions install https://github.com/novolgit/vstok-agent-plugins
+```
+
+Restart Gemini CLI, open `/mcp`, and use `/mcp auth` to authorize your selected workspace. The manifest uses Streamable HTTP and OAuth discovery without embedded credentials. VStok in Gemini exposes only four read tools; execution remains supported in Codex, Cursor and Claude.
+
+The repository is prepared for the Gemini CLI gallery. Gallery indexing and authenticated runtime verification are separate from source publication.
+
+## Perplexity custom connector
+
+In Account settings > Connectors, choose + Custom connector > Remote. Use the HTTPS endpoint documented above, OAuth authentication and Streamable HTTP. Complete the normal consent flow for the workspace you intend to share. Perplexity plan and admin restrictions may apply. This manual configuration is separate from a public Connector Marketplace listing.

@@ -1,6 +1,6 @@
 {
   "name": "vstok-agent-execution",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Turn verified VStok recommendations into minimal draft pull requests with Codex.",
   "author": {
     "name": "VStok",
@@ -13,11 +13,16 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "VStok Agent Execution",
-    "shortDescription": "Implement verified VStok recommendations as safe draft PRs.",
+    "shortDescription": "Verified changes to draft PRs",
     "longDescription": "Connect Codex to VStok, select a code-eligible AI visibility recommendation, implement the smallest repository change, run native checks, and create a draft pull request. GitHub and VStok verification remain authoritative.",
     "developerName": "VStok",
     "category": "Developer Tools",
-    "capabilities": ["Remote MCP", "OAuth", "GitHub draft PRs", "Verification"],
+    "capabilities": [
+      "Remote MCP",
+      "OAuth",
+      "GitHub draft PRs",
+      "Verification"
+    ],
     "defaultPrompt": [
       "Find the best current VStok recommendation for this repository and implement it to a draft PR.",
       "List code-eligible VStok recommendations for the current project.",
@@ -25,6 +30,10 @@
     ],
     "brandColor": "#8B5CF6",
     "composerIcon": "./assets/icon-180.png",
-    "logo": "./assets/icon-512.png"
+    "logo": "./assets/icon-512.png",
+    "websiteURL": "https://vstok.net",
+    "privacyPolicyURL": "https://vstok.net/legal/privacy",
+    "termsOfServiceURL": "https://vstok.net/legal/terms",
+    "supportURL": "https://vstok.net/help"
   }
 }

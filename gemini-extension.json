@@ -1,6 +1,6 @@
 {
   "name": "vstok-recommendations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Review verified VStok recommendations and execution status with read-only MCP tools.",
   "mcpServers": {
     "vstok": {
@@ -17,7 +17,9 @@
           "projects:read",
           "recommendations:read",
           "executions:read"
-        ]
+        ],
+        "clientId": "ShxpYP9x95SelreGgEbB1HN0D5do51y6qCZnNyX31Kd",
+        "redirectUri": "http://localhost:18766/oauth/callback"
       }
     }
   },
